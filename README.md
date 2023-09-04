@@ -1,6 +1,7 @@
 ## resource-hint-generator
-
 `prefetch`, `preconnect`和`dns-prefetch`等资源优先级提示自动化生成工具。
+
+> 配套讲解文章《1.4秒到0.4秒-2行代码让JS加载耗时减少67%》：https://juejin.cn/post/7274889579076108348
 
 ## 特性
 1. 自动遍历构建产物，生成注入脚本，运行后注入`prefetch`资源优先级提示`link`标签
@@ -8,7 +9,6 @@
 
 ## 演示：
 ![img_v2_9555746f-0482-4e47-bfed-30e6a23032fg](https://github.com/JuniorTour/blog/assets/14243906/1a506797-ba26-4e21-be5b-a93def18b020)
-
 
 ## 用法
 
@@ -57,4 +57,4 @@ publicPath | 用于和`includeFileTestFunc`、`includeFileNames`匹配到的文�
 preconnectDomains | 指定一个数组，数组中的每个字符串元素，都将产生2个`href`属性值为当前字符串的`<link rel="preconnect">`标签和`<link rel="dns-prefetch">`标签 | String[] | `[]`
 configFileName | 本地配置文件名称 | String | `'resource-hint-generator-config.js'`
 
-> 欢迎 Issue && PR~
+欢迎 Issue && PR~
