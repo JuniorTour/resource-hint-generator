@@ -1,0 +1,35 @@
+{
+  "name": "resource-hint-generator",
+  "version": "0.0.1",
+  "description": "NPM package for generating prefetch, preload and other HTML resource hint",
+  "main": "index.js",
+  "files": [
+    "src/*"
+  ],
+  "bin": {
+    "resource-hint-generator": "./src/bin.js"
+  },
+  "scripts": {
+    "jest": "jest",
+    "jest-dev": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
+    "test": "jest"
+  },
+  "author": "JuniorTour",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "jest": "^29.6.4"
+  },
+  "keywords": [
+    "prefetch",
+    "preload",
+    "preconnect",
+    "dns-prefetch",
+    "resource-hint"
+  ],
+  "engines": {
+    "node": ">14"
+  }
+}
