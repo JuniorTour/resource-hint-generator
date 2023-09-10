@@ -38,14 +38,14 @@ describe('Resource hint generator file config', () => {
       expect(fileContent).toMatch(name);
     })
     expect(fileContent).toMatch(
-      `const CDN_HOST = '${config.publicPath}' || window.cdnPath;`
+      `const CDN_HOST = '${config.publicPath}'`
     );
     expect(fileContent).toMatch(`['${config.preconnectDomains}',]`);
     const crossOriginValue = typeof config.crossOriginValue === 'string'
     ? `'${config.crossOriginValue}'`
     : config.crossOriginValue
     expect(fileContent).toMatch(
-      `const crossOriginAttrVal = ${crossOriginValue} || '';`
+      `const crossOriginAttrVal = ${crossOriginValue}`
     );
   });
 });

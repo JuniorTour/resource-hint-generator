@@ -37,8 +37,8 @@ describe('Basic resource hint generator', () => {
     
     const fileContent = getFileContent(resourceHintJSFilePath)
     expect(fileContent).toMatch(`'/a.js','/b.css','first/first.js','second/second.js',`)
-    expect(fileContent).toMatch(`const CDN_HOST = '' || window.cdnPath;`)
-    expect(fileContent).toMatch(`const crossOriginAttrVal = undefined || '';`)
+    expect(fileContent).toMatch(`const CDN_HOST = ''`)
+    expect(fileContent).toMatch(`const crossOriginAttrVal = undefined;`)
   });
   
   test('should generate preconnect resource hint', async () => {
@@ -57,8 +57,8 @@ describe('Basic resource hint generator', () => {
     
     const fileContent = getFileContent(resourceHintJSFilePath)
     expect(fileContent).toMatch(`['/${includeFiles}',]`)
-    expect(fileContent).toMatch(`const CDN_HOST = '${publicPath}' || window.cdnPath;`)
+    expect(fileContent).toMatch(`const CDN_HOST = '${publicPath}'`)
     expect(fileContent).toMatch(`['${preconnectDomains}',]`)
-    expect(fileContent).toMatch(`const crossOriginAttrVal = undefined || '';`)
+    expect(fileContent).toMatch(`const crossOriginAttrVal = undefined`)
   });
 });

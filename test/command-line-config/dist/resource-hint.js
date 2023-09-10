@@ -3,8 +3,8 @@ Add resource hint link element, eg: <link rel="prefetch" href="${targetPath}">
 */
 try {
   (function (prefetchFilesPath, preconnectDomains) {
-    const crossOriginAttrVal = undefined || '';
-    const CDN_HOST = 'https://a.com/static/' || window.cdnPath;
+    const crossOriginAttrVal = undefined;
+    const CDN_HOST = 'https://a.com/static/';
     if (!prefetchFilesPath || !prefetchFilesPath.length) {
       return;
     }
