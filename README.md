@@ -11,8 +11,8 @@
   </a>
   <a href="https://www.npmjs.com/package/resource-hint-generator" target="_blank">
     <img
-    src="https://img.shields.io/github/size/JuniorTour/resource-hint-generator/lib/index.js"
-    alt="Size">
+    src="https://img.shields.io/github/size/JuniorTour/resource-hint-generator/test/file-config/dist/resource-hint.js"
+    alt="Hint File Size">
   </a>
   <a href="https://www.npmjs.com/package/resource-hint-generator" target="_blank">
     <img
