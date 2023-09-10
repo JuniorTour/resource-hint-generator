@@ -1,7 +1,36 @@
-## resource-hint-generator
+## resource-hint-generator [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/JuniorTour/resource-hint-generator/pulls)
 `prefetch`, `preconnect`和`dns-prefetch`等资源优先级提示自动化生成工具。
 
 > 配套讲解文章《1.4秒到0.4秒-2行代码让JS加载耗时减少67%》：https://juejin.cn/post/7274889579076108348
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/resource-hint-generator" target="_blank">
+    <img
+    src="https://img.shields.io/npm/dt/resource-hint-generator"
+    alt="Downloads">
+  </a>
+  <a href="https://www.npmjs.com/package/resource-hint-generator" target="_blank">
+    <img
+    src="https://img.shields.io/github/size/JuniorTour/resource-hint-generator/lib/index.js"
+    alt="Size">
+  </a>
+  <a href="https://www.npmjs.com/package/resource-hint-generator" target="_blank">
+    <img
+    src="https://img.shields.io/npm/v/resource-hint-generator.svg?sanitize=true"
+    alt="Version">
+  </a>
+  <a href="https://github.com/JuniorTour/resource-hint-generator" target="_blank">
+    <img
+    src="https://img.shields.io/github/last-commit/JuniorTour/resource-hint-generator?sanitize=true"
+    alt="LastCommit">
+  </a>
+  <a href="https://github.com/JuniorTour/resource-hint-generator/actions/workflows/main.yml" target="_blank">
+    <img
+    src="https://github.com/JuniorTour/resource-hint-generator/actions/workflows/main.yml/badge.svg"
+    alt="CIStatus">
+  </a>
+</p>
+
 
 ## 特性
 1. 自动遍历构建产物，生成注入脚本，运行后注入`prefetch`资源优先级提示`link`标签
@@ -57,4 +86,4 @@ publicPath | 用于和`includeFileTestFunc`、`includeFileNames`匹配到的文�
 preconnectDomains | 指定一个数组，数组中的每个字符串元素，都将产生2个`href`属性值为当前字符串的`<link rel="preconnect">`标签和`<link rel="dns-prefetch">`标签 | String[] | `[]`
 configFileName | 本地配置文件名称 | String | `'resource-hint-generator-config.js'`
 
-欢迎 Issue && PR~
+## 欢迎 Issue && PR
