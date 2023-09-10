@@ -1,7 +1,7 @@
 {
   "homepage": "https://github.com/JuniorTour/resource-hint-generator",
   "name": "resource-hint-generator",
-  "version": "0.0.2",
+  "version": "0.0.3-beta-1",
   "description": "NPM package for generating prefetch, preload and other HTML resource hint",
   "main": "index.js",
   "files": [
