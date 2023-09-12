@@ -37,7 +37,8 @@
 2. 指定域名，生成注入脚本，运行后注入`preconnect`和`dns-prefetch`资源优先级提示`link`标签
 
 ## 演示：
-![img_v2_9555746f-0482-4e47-bfed-30e6a23032fg](https://github.com/JuniorTour/blog/assets/14243906/1a506797-ba26-4e21-be5b-a93def18b020)
+## 在线运行DEMO：https://stackblitz.com/edit/github-ckfcpg?file=README.md,dist%2Fresource-hint.js
+![fe295039-983b-45a6-91b3-67d9131a8316](https://github.com/JuniorTour/blog/assets/14243906/59b9515d-b179-4f90-a753-c95de06be7ab)
 
 ## 用法
 
@@ -76,7 +77,7 @@ module.exports = {
 
 配置项 | 简介 | 类型 | 默认值
 -- | -- | -- | --
-distPath | 打包产物路径 | String | `'./dist'`
+distPath | 打包产物路径，也是生成的resource-hint.js输出路径 | String | `'./dist'`
 includeFileTestFunc | 指定一个函数，返回布尔值表示，遍历`distPath`找到的的`fileName`，是否会被作为`<link rel="prefetch">`的`href`属性值 | Function | `(fileName: string) => false`
 includeFileNames | 指定一个数组，数组中的字符串元素，会被作为`<link rel="prefetch">`的`href`属性值 | String[] | `[]`
 projectRootPath | 项目根目录路径 | String | `''`

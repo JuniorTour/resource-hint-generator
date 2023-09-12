@@ -55,8 +55,6 @@ function start() {
   );
   console.log(`distDirPath=${distDirPath}`);
 
-  // FIXME 要支持 hash文件名！
-  // 干脆一步到位支持 resource-hint-generator-config.js
   const assetFiles = getAssetFiles([distDirPath]);
   const prefetchFilesDataStr = getDataStrFromArray(assetFiles);
   // console.log(`prefetchFilesDataStr=${prefetchFilesDataStr}`);

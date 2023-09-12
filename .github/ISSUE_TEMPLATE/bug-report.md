@@ -11,9 +11,9 @@ assignees: ''
 
 ## Current behavior
 
-Describe how to re-produce your error.
+Please [resource-hint-generator Online DEMO](https://stackblitz.com/edit/github-ckfcpg?file=README.md,dist%2Fresource-hint.js) to re-produce your error.
 
-This will help us fix it ASAP.
+And descrieb the error you got. This will help us fix it ASAP.
 
 ``` js
 // or write your error code here
