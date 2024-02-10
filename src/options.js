@@ -12,6 +12,7 @@ const defaultOptions = {
   preconnectDomains: [],
   configFileName: 'resource-hint-generator-config.js',
   includeFileTestFunc: () => false,
+  buildEnv: 'PROD'
 };
 
 let options = defaultOptions || {};

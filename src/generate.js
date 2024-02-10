@@ -47,6 +47,7 @@ function getDataStrFromArray(arr) {
 }
 
 function start() {
+  let outputFileName, outputFilePath;
   const distPath = options.distPath;
   console.log(`[resource-hint-generator] distPath=${distPath}`);
   const distDirPath = path.resolve(
@@ -62,7 +63,20 @@ function start() {
   const domainsDataStr = getDataStrFromArray(options.preconnectDomains);
   // console.log(`domainsDataStr=${domainsDataStr}`);
 
-  const outputFilePath = `${distDirPath}/${options.resourceHintFileName}`;
+  const resourceHintFileName = options.resourceHintFileName;
+
+  if(options.buildEnv === 'PROD'){ // default build in PROD env
+    outputFileName = `${resourceHintFileName}`;
+    outputFilePath = `${distDirPath}/${outputFileName}`;
+  }else{ // other build env: DEV or TEST, add '-dev' or '-test' for output file name
+    const fileNameArr = resourceHintFileName.split("."); // [name, type]
+    const fileName = fileNameArr.slice(0, fileNameArr.length - 1);
+    const fileType = fileNameArr[fileNameArr.length - 1];
+
+    outputFileName = `${fileName}-${options.buildEnv.toLowerCase()}`;
+    outputFilePath = `${distDirPath}/${outputFileName}.${fileType}`;
+  }
+
   console.log(`outputFilePath=${outputFilePath}`);
   // Fixme 考虑随项目编译resourceHintFileName，是不是就得考虑Webpack Plugin形式了？
   debugger;
